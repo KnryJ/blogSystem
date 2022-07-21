@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script
+            src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form method="post" class="sign-in-form">
+                <h2 class="title">登录</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="用户名" />
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="密码" />
+                </div>
+                <div class="btn-all">
+                    <input type="submit" value="登录" id="login" class="btn solid" />
+                    <input type="submit" value="注册" id="register" class="btn solid" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<a id="a" href="/register" style="display: none"></a>
+<a id="a1" href="/login.do" style="display: none"></a>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+    $("#register").click(function () {
+        var href = $("#a").attr("href");
+        $(".sign-in-form").attr("action", href)
+    })
+
+    $("#login").click(function () {
+        var href = $("#a1").attr("href");
+        $(".sign-in-form").attr("action", href)
+    })
+</script>
+</body>
+</html>

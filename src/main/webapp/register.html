@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/register.css" />
+    <script
+            src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <span class="errorMsg">
+            </span>
+            <form action="/register.do" method="post" class="sign-up-form">
+                <h2 class="title">注册</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="用户名"/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="密码" />
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                    <input type="text" id="avatar" name="avatar" placeholder="头像链接" />
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-git" aria-hidden="true"></i>
+                    <input type="text" id="git_repo" name="git_repo" placeholder="git仓库地址" />
+                </div>
+                    <input type="submit" class="btn" value="注册" />
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
